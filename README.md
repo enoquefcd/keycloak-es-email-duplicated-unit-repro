@@ -24,7 +24,7 @@ Affected keys in
 The remaining keys of the same file already use the correct form
 (e.g. `executeActionsBodyHtml`: *"Este enlace caducará en {4}."*).
 
-* **Upstream issue:** https://github.com/keycloak/keycloak/issues/ISSUE_NUMBER
+* **Upstream issue:** https://github.com/keycloak/keycloak/issues/51120
 * **Fix (ready-to-open PR):** https://github.com/enoquefcd/keycloak/pull/9
   (branch [`email-es-duplicate-minutes`](https://github.com/enoquefcd/keycloak/tree/email-es-duplicate-minutes))
 
