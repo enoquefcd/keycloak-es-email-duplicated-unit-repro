@@ -1,0 +1,26 @@
+{
+  "realm": "fix-demo",
+  "enabled": true,
+  "internationalizationEnabled": true,
+  "supportedLocales": ["en", "es"],
+  "defaultLocale": "es",
+  "resetPasswordAllowed": true,
+  "emailTheme": "es-fixed",
+  "smtpServer": {
+    "host": "mailpit",
+    "port": "1025",
+    "from": "keycloak@demo.local"
+  },
+  "users": [
+    {
+      "username": "maria",
+      "email": "maria@fix-demo.local",
+      "emailVerified": true,
+      "enabled": true,
+      "firstName": "Maria",
+      "lastName": "Demo",
+      "attributes": { "locale": ["es"] },
+      "credentials": [{ "type": "password", "value": "maria" }]
+    }
+  ]
+}

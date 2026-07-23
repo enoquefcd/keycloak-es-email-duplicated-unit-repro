@@ -1,0 +1,19 @@
+services:
+  mailpit:
+    image: axllent/mailpit:latest
+    ports:
+      - "${MAILPIT_PORT:-8025}:8025"
+
+  keycloak:
+    image: quay.io/keycloak/keycloak:26.7.0
+    command: start-dev --import-realm
+    environment:
+      KC_BOOTSTRAP_ADMIN_USERNAME: admin
+      KC_BOOTSTRAP_ADMIN_PASSWORD: admin
+    ports:
+      - "${KC_PORT:-8080}:8080"
+    volumes:
+      - ./realms:/opt/keycloak/data/import:ro
+      - ./themes/es-fixed:/opt/keycloak/themes/es-fixed:ro
+    depends_on:
+      - mailpit
